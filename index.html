@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Star Wars - The music shoot them up</title>
+	<link rel="icon" type="image/png" href="src/img/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="src/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="src/css/style.css">
+	<link rel="stylesheet" type="text/css" href="src/css/animate.css">
+	<link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.createjs.com/easeljs-0.5.0.min.js"></script>
+</head>
+<body  onkeydown="touche(event)" class="no_selection">
+	<div class="content">
+		<div class="header">
+			<nav class="menu_main_wrap">
+				<ul class="menu_main">
+					<li class="menu_item home">
+						<a href="#" class="menu_btn">
+							<img class="logo" src="src/img/logo_shoot_them_up_speed.png" alt="Star Wars - The music shoot them up">
+						</a>
+					</li>
+					<li class="menu_item rules">
+						<a href="#" class="menu_btn">RÈGLES</a>
+					</li>
+					<li class="menu_item credit">
+							<a href="#" class="menu_btn">CRÉDITS</a>
+					</li>
+					<li class="menu_item game">
+						<a href="#" class="menu_btn" onclick="">JOUER</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="content_home animated zoomIn">
+			<div class="welcome_wrap">
+				<h1 class="welcome">BIENVENUE JEUNE PADAWAN</h1>
+				<p class="ready">La force t'as guidé jusqu'à nous car elle a une mission à te confier.</br>L'empire a pris possession des musiques de Star Wars et seul un courageux padawan peut nous sauver.</br> Seras-tu capable d'affronter les vaisseaux de l'empire pour briser leur blocus afin de récupérer les musiques de Star Wars?</p>
+			</div>
+			<div class="parallax_conteneur">
+				<div data-offset="60" class="parallax xwing"></div>
+				<div data-offset="150" class="parallax enemy enemy_one"></div>
+				<div data-offset="70" class="parallax enemy enemy_two"></div>
+				<div data-offset="100" class="parallax enemy enemy_three"></div>
+				<div data-offset="140" class="parallax laser laser_one"></div>
+				<div data-offset="90" class="parallax laser laser_two"></div>
+				<div data-offset="80" class="parallax laser laser_three"></div>
+				<div data-offset="90" class="parallax laser laser_four"></div>
+				<div data-offset="140" class="parallax laser laser_five"></div>
+				<div data-offset="160" class="parallax laser laser_six"></div>
+				<div data-offset="100" class="parallax laser laser_seven"></div>
+				<div data-offset="120" class="parallax laser laser_eight"></div>
+				<div data-offset="10" class="parallax star star_one"></div>
+				<div data-offset="30" class="parallax star star_two"></div>
+				<div data-offset="10" class="parallax star star_three"></div>
+				<div data-offset="20" class="parallax star star_four"></div>
+				<div data-offset="20" class="parallax star star_five"></div>
+				<div data-offset="10" class="parallax star star_six"></div>
+				<div data-offset="10" class="parallax star star_seven"></div>
+			</div>
+		</div>
+		<div class="content_rules animated zoomIn">
+			<p class="txt_rules">Le défilement se fait de la <span class="sum">gauche</span> vers la <span class="sum">droite</span>. 
+L’apparition des ennemis s’effectue en fonction des <span class="sum">tempo de la musique</span>.
+<span class="sum">Quatre vaisseaux</span> sont disponibles, vous choisirez l’un d'entre eux avant de débuter la partie.</br></br>  
+<span class="sum">3 vies disponibles</span> : lors de la défaite, retour au début du niveau courant
+</br></br>  
+<span class="sum">3 bonus sont disponibles</span> : les <span class="sum">astromécanos bleus</span> redonnent une vie, les <span class="sum">astromécanos verts</span> permettent de tirer deux lasers à la fois et enfin les <span class="sum">astromécanos rouges</span> offrent un laser qui traverse les ennemis en les tuant.</br></br>  
+La <span class="sum">collision</span> de votre vaisseau avec un vaisseau ennemi vous fera perdre une vie.</br></br>  
+La <span class="sum">vie de votre vaisseau</span> est matérialisée par un <span class="sum">changement de l’aspect graphique</span> dudit vaisseau. Celui-ci passe alors de : bon état à un état moyennement cassé et enfin à un état très cassé.  
+Si votre vaisseau prend un dégât, celui-ci devient <span class="sum">invincible durant 2 secondes</span>.</br></br>  
+Le niveau se termine lorsque la musique est finie.
+Si votre vaisseau <span class="sum">perd ses 3 vies</span>, un écran <span class="sum">“Game over”</span> apparaît et vous donne la possibilité de recommencer le niveau en cours.</br></br>  
+La <span class="sum">touche ECHAP</span> permet aussi de mettre le <span class="sum">jeu en pause</span> et d'accéder à quelques options, comme <span class="sum">couper la musique</span>.</p>
+		</div>
+		<div class="content_credit">
+			<p id="start">Dans une galaxie lointaine, très lointaine...</p>
+
+			<div id="titles">
+				<div id="titlecontent">
+					<p>C'est une période de semaine intensive.</p>
+					<p>Un groupe de codeurs orbitant autour de l’étoile John Williams s’attèlent à créer un Shoot them up musical.</p>
+					<p>Tandis que le jeune padawan Ronan Polin entreprend de rendre ludique les musiques de son maître,</p>
+					<p>le Jedi Matthieu Tourdes tente de transmettre le pouvoir du JavaScript par le biais de son site internet.</p>
+					<p>Au même moment, la princesse Leil.. Orane Bosom, avec l'aide de son fidèle wookie Gay Simon, relooke les vaisseaux de la république.</p> 
+					<p>Et le contrebandier Lucas Lemahieu met les mains dans le cambouis pour réparer son Faucon Millénium légendaire.</p>
+				</div>
+			</div>
+		</div>
+		<div class="content_game">
+			<div class="choose_spaceship animated fadeInRight">
+				<div class="spaceship spaceship_xwing"></div>
+				<div class="spaceship spaceship_millenium"></div>
+				<div class="spaceship spaceship_naboo"></div>
+				<div class="spaceship spaceship_interceptor"></div>
+				<h2 class="txt_choose_spaceship">CHOISIS TON VAISSEAU</h2>
+				<h3 class="spaceship_name txt_xwing">X-WING</h3>
+				<h3 class="spaceship_name txt_interceptor">INTERCEPTOR</h3>
+				<h3 class="spaceship_name txt_naboo">NABOO</h3>
+				<h3 class="spaceship_name txt_millenium">MILLENIUM</h3>
+			</div>
+			<div class="choose_music animated fadeInRight">
+				<h1 class="choose_music_title">CHOISIS TA MUSIQUE</h1>
+				<button class="previous" onclick="previous()">RETOUR AU CHOIX DES VAISSEAUX</button>
+				<form class="form" name="Choix">
+					<span class="custom_dropdown custom_dropdown_white">
+						<select class="custom_dropdown_select custom_dropdown_select_white" name="Épisode Star Wars" onChange="level()">
+							<option value="Star Wars IV">Star Wars IV: Un nouvel espoir
+							<option value="Star Wars V">Star Wars V: L'empire contre attaque
+							<option value="Star Wars VI">Star Wars VI: le retour du Jedi
+							<option value="Star Wars I">Star Wars I: La menace fantôme
+							<option value="Star Wars II">Star Wars II: L'attaque des clones
+							<option value="Star Wars III">Star Wars III: La revanche des Sith
+						</select>
+					</span>
+				</form>
+				<div class="star_wars_quatre">
+					<button class="btn_level rebel_blockade_runner" onclick="change(1)">Main theme</button></br>
+					<button class="btn_level the_force_theme" onclick="change(2)">The Force theme</button></br>
+					<button class="btn_level cantina_band" onclick="change(3);">Cantina band</button></br>
+					<button class="btn_level the_throne_room" onclick="change(4)">The throne room</button>
+				</div>
+				<div class="star_wars_cinq">
+					<button class="btn_level the_imperial_march" onclick="change(5)">The Imperial march</button></br>
+					<button class="btn_level yoda_and_the_force" onclick="change(6)">Yoda and the Force</button>
+				</div>
+				<div class="star_wars_six">
+					<button class="btn_level jedi_rocks" onclick="change(7)">Jedi rocks</button></br>
+					<button class="btn_level the_battle_of_endor" onclick="change(8)">The battle of Endor</button></br>
+					<button class="btn_level victory_celebration" onclick="change(9)">Victory celebration</button>
+				</div>
+				<div class="star_wars_un">
+					<button class="btn_level droid_invasion" onclick="change(10)">The Droid invasion</button></br>
+					<button class="btn_level duel_of_the_fates" onclick="change(11)">Duel of the Fates</button></br>
+					<button class="btn_level qui_gons_noble_end" onclick="change(12)">Qui-Gon's noble end</button></br>
+					<button class="btn_level augies_great_municipal" onclick="change(13)">Augie's Great Municipal</button>
+				</div>
+				<div class="star_wars_deux">
+					<button class="btn_level accross_the_stars" onclick="change(14)">Accross the stars</button></br>
+					<button class="btn_level confrontation_with_Doku" onclick="change(15)">Confrontation with Doku</button>
+				</div>
+				<div class="star_wars_trois">
+					<button class="btn_level anakins_betrayal" onclick="change(16)">Anakin’s Betrayal</button></br>
+					<button class="btn_level battle_of_the_heroes" onclick="change(17)">Battle of the heroes</button>
+				</div>
+				<div class="selected_music">
+					<div class="selected_sw1">
+						<img class="img_music" src="src/img/sw1.png" alt="SW1">
+						<h1 class="selected_music_title">STAR WARS I</h1>
+						<p class="selected_music_description">Bande originale composée par John Williams et enregistrée en 1999 avec le London Symphony Orchestra. Cela fait ainsi 16 ans qu’un enregistrement pour un nouveau Star Wars n’avait pas eu lieu. La musique du premier film donnera ainsi le ton des bandes originales des deux prochains films.</p>
+					</div>
+					<div class="selected_sw2">
+						<img class="img_music" src="src/img/sw2.png" alt="SW2">
+						<h1 class="selected_music_title">STAR WARS II</h1>
+						<p class="selected_music_description">Bande originale composé par John Williams et enregistré en 2002 avec le London Symphony Orchestra. L’album de la musique du film a notamment été certifié disque d’or.</p>
+					</div>
+					<div class="selected_sw3">
+						<img class="img_music" src="src/img/sw3.png" alt="SW3">
+						<h1 class="selected_music_title">STAR WARS III</h1>
+						<p class="selected_music_description">Bande originale composée par John Williams et enregistrée en 2005 avec le London Symphony Orchestra. C’est ainsi la dernière participation de John Williams pour Star Wars… jusqu’au prochain annoncé pour 2015 !</p>
+					</div>
+					<div class="selected_sw4">
+						<img class="img_music" src="src/img/sw4.png" alt="SW4">
+						<h1 class="selected_music_title">STAR WARS IV</h1>
+						<p class="selected_music_description">Bande originale composée par John Williams et enregistrée en 1977 avec le London Symphony Orchestra. John Williams gagna par la suite l’Oscar de la meilleur partition originale.
+						Il écrira, sous l’ordre de George Lucas, une partition originale aux influences classiques de Prokofiev, Mendelssohn, TchaÏkovski, Stavinsky, Holst ou encore Wagner.</p>
+					</div>
+					<div class="selected_sw5">
+						<img class="img_music" src="src/img/sw5.png" alt="SW5">
+						<h1 class="selected_music_title">STAR WARS V</h1>
+						<p class="selected_music_description">Bande originale composée par John Williams et enregistrée en 1979 et 1980  avec le London Symphony Orchestra.</p>
+					</div>
+					<div class="selected_sw6">
+						<img class="img_music" src="src/img/sw6.png" alt="SW6">
+						<h1 class="selected_music_title">STAR WARS VI</h1>
+						<p class="selected_music_description">Bande originale composée par John Williams et enregistrée en 1983 avec le London Symphony Orchestra.</p>
+					</div>
+					<div class="selected_1">
+						<img class="img_music" src="src/img/music1.png" alt="music1">
+						<h1 class="selected_music_title">MAIN THEME</h1>
+						<p class="selected_music_description">Générique de début emblématique de l’univers Star Wars. Un impact toujours aussi mémorable aujourd’hui où le défilement d’un texte introductif en plein espace fait place à une course poursuite du vaisseau spatial de Leia face à l’imposant destroyer Stellaire mené par le grand Dark Vador.</p>
+						<button class="lets_go" onclick="letsGo('sw4_s1', sw4_s1);">C'EST PARTI</button>
+					</div>
+					<div class="selected_2">
+						<img class="img_music" src="src/img/music2.png" alt="music2">
+						<h1 class="selected_music_title">THE FORCE THEME</h1>
+						<p class="selected_music_description">Thème récurrent de la saga, la Force et son célèbre thème emprisonne le spectateur dans un contraste entre nostalgie et espoir.</p>
+						<button class="lets_go" onclick="letsGo('sw4_s2', sw4_s2);">C'EST PARTI</button>
+					</div>
+					<div class="selected_3">
+						<img class="img_music" src="src/img/music3.png" alt="music3">
+						<h1 class="selected_music_title">CANTINA BAND</h1>
+						<p class="selected_music_description">Thème culte et pourtant bien différent des autres compositions de John Williams, cette musique fortement jazzy imprègne l’atmosphère d’une ambiance toute particulière. Joué dans une cantina à Mos Eisley ce thème précède la rencontre entre Luke Skywalker et Han Solo.</p>
+						<button class="lets_go" onclick="letsGo('sw4_s3', sw4_s3);">C'EST PARTI</button>
+					</div>
+					<div class="selected_4">
+						<img class="img_music" src="src/img/music4.png" alt="music4">
+						<h1 class="selected_music_title">THE THRONE ROOM</h1>
+						<p class="selected_music_description">Luke Skywalker, Han Solo et Chewbacca sont accueillis en héros suite à la première victoire de l’Alliance contre l’Empire. Face au trône cette musique à la fois militaire, épique et dramatique résonne dans ce lieu autant qu’elle résonne dans notre mémoire.</p>
+						<button class="lets_go" onclick="letsGo('sw4_s4', sw4_s4);">C'EST PARTI</button>
+					</div>
+					<div class="selected_5">
+						<img class="img_music" src="src/img/music5.png" alt="music5">
+						<h1 class="selected_music_title">THE IMPERIAL MARCH</h1>
+						<p class="selected_music_description">La musique emblématique du cinquième volet. Ce thème impérial représente le système totalitaire de l’Empire Galactique. Thème iconique par excellence.</p>
+						<button class="lets_go" onclick="letsGo('sw5_s1', sw5_s1);">C'EST PARTI</button>
+					</div>
+					<div class="selected_6">
+						<img class="img_music" src="src/img/music6.png"alt="music6">
+						<h1 class="selected_music_title">YODA AND THE FORCE</h1>
+						<p class="selected_music_description">Reprenant la musique “The Force Theme” pour l’incorporer au “Yoda Theme”. Cette partition se déroule durant l'entraînement intensif que soumet Yoda à Luke Skywalker. A la fois tragique et mystérieux ce thème insiste sur le mystère de cet étrange personnage qu’est Yoda.</p>
+						<button class="lets_go" onclick="letsGo('sw5_s2', sw5_s2);">C'EST PARTI</button>
+					</div>
+					<div class="selected_7">
+						<img class="img_music" src="src/img/music7.png" alt="music7">
+						<h1 class="selected_music_title">JEDI ROCKS</h1>
+						<p class="selected_music_description">Musique rock plus que surprenante dans l’univers Star Wars. Ce son retranscrit l’atmosphère du palais de Jabba le Hutt. Elle est composée spécialement pour l’édition spéciale de 1997.</p>
+						<button class="lets_go" onclick="letsGo('sw6_s1', sw6_s1);">C'EST PARTI</button>
+					</div>
+					<div class="selected_8">
+						<img class="img_music" src="src/img/music8.png" alt="music8">
+						<h1 class="selected_music_title">THE BATTLE OF ENDOR</h1>
+						<p class="selected_music_description">Long thème retraçant la bataille d’Endor. Épique comme ce qu’elle représente dans le film, cette bataille d’Endor se concentrant sur trois lieux simultanément.</p>
+						<button class="lets_go" onclick="letsGo('sw6_s2', sw6_s2);">C'EST PARTI</button>
+					</div>
+					<div class="selected_9">
+						<img class="img_music" src="src/img/music9.png" alt="music9">
+						<h1 class="selected_music_title">VICTORY CELEBRATION</h1>
+						<p class="selected_music_description">Cette musique remplace “Ewok Celebration” présente dans la version originale du film. La fin d’une époque, d’une saga, exprimée à travers un thème de joie d’une grande douceur.</p>
+						<button class="lets_go" onclick="letsGo('sw6_s3', sw6_s3);">C'EST PARTI</button>
+					</div>
+					<div class="selected_10">
+						<img class="img_music" src="src/img/music10.png" alt="music10">
+						<h1 class="selected_music_title">THE DROID INVASION</h1>
+						<p class="selected_music_description">Aussi appelé la Marche de la Fédération du commerce, elle représente l’armée droïde de la Fédération du Commerce attaquant Naboo. Par la suite elle sera réutilisée pour représenter les clones.</p>
+						<button class="lets_go" onclick="letsGo('sw1_s1', sw1_s1);">C'EST PARTI</button>
+					</div>
+					<div class="selected_11">
+						<img class="img_music" src="src/img/music11.png" alt="music11">
+						<h1 class="selected_music_title">DUEL OF THE FATES</h1>
+						<p class="selected_music_description">Jouée durant la combat de sabre laser opposant Dark Maul à Obi-Wan Kenobi et Qui-Gon Jinn. Elle est ainsi représentative d’un affrontement entre la lumière et le coté obscur. Le choeur chante un texte qui peut se traduire ainsi : “Sous la langue s’enracine une lutte plus effrayante, et une autre qui fait rage derrière, dans la tête".</p>
+						<button class="lets_go" onclick="letsGo('sw1_s2', sw1_s2);">C'EST PARTI</button>
+					</div>
+					<div class="selected_12">
+						<img class="img_music" src="src/img/music12.png" alt="music12">
+						<h1 class="selected_music_title">QUI-GON'S NOBLE END</h1>
+						<p class="selected_music_description">Succédant à “Duel of the Fates” cette musique annonce le destin tragique de Qui-Gon Jinn mourant avec honneur face à ce redoutable adversaire qu’est Dark Maul.</p>
+						<button class="lets_go" onclick="letsGo('sw1_s3', sw1_s3);">C'EST PARTI</button>
+					</div>
+					<div class="selected_13">
+						<img class="img_music" src="src/img/music13.png" alt="music13">
+						<h1 class="selected_music_title">AUGIE'S GREAT MUNICIPAL BAND</h1>
+						<p class="selected_music_description">Cette musique peut rappeler par son contexte la musique de célébration du sixième volet. Ce sera le seul vrai moment de joie de cette nouvelle trilogie qui deviendra par la suite beaucoup plus sombre tragique.</p>
+						<button class="lets_go" onclick="letsGo('sw1_s4', sw1_s4);">C'EST PARTI</button>
+					</div>
+					<div class="selected_14">
+						<img class="img_music" src="src/img/music14.png" alt="music14">
+						<h1 class="selected_music_title">ACROSS THE STARS</h1>
+						<p class="selected_music_description">Le thème romantique de cette nouvelle trilogie. A la fois doux et ambigu, la musique est associée à l’amour interdit et touchant entre Anakin Skywalker et Padmé Amidala.</p>
+						<button class="lets_go" onclick="letsGo('sw2_s1', sw2_s1);">C'EST PARTI</button>
+					</div>
+					<div class="selected_15">
+						<img class="img_music" src="src/img/music15.png" alt="music15">
+						<h1 class="selected_music_title">CONFRONTATION WITH DOOKU</h1>
+						<p class="selected_music_description">Elle prend place lors de la scène finale opposant Anakin Skywalker et Obi-Wan Kenobi face au comte Dooku, puis par la suite Yoda face au comte Dooku. Elle reprend certains thèmes déjà connus tel que celui de la Force.</p>
+						<button class="lets_go" onclick="letsGo('sw2_s2', sw2_s2);">C'EST PARTI</button>
+					</div>
+					<div class="selected_16">
+						<img class="img_music" src="src/img/music16.png" alt="music16">
+						<h1 class="selected_music_title">ANAKIN'S BETRAYAL</h1>
+						<p class="selected_music_description">Longue lamentation qui reprend le célèbre Ordre 66 annonçant la fin de l’Ordre Jedi.</p>
+						<button class="lets_go" onclick="letsGo('sw3_s1', sw3_s1);">C'EST PARTI</button>
+					</div>
+					<div class="selected_17">
+						<img class="img_music" src="src/img/music17.png" alt="music17">
+						<h1 class="selected_music_title">BATTLE OF HEROES</h1>
+						<p class="selected_music_description">Rappelant par son contexte “Duel of the Fates” de l’épisode I, elle est toutefois bien différente en accentuant l’épique et le drame. Musique mettant un point important sur le danger et l’action, elle illustre la grande scène de combat final entre Obi-Wan Kenobi et Anakin Skywalker.</p>
+						<button class="lets_go" onclick="letsGo('sw3_s2', sw3_s2);">C'EST PARTI</button>
+					</div>
+				</div>
+			</div>
+			<canvas id="canvas" width="960" height="600" backGroundColor="#E6E6FA"></canvas>
+			<audio src="src/media/audios/sw4_s3.mp3" class="audio" ></audio>
+			<audio src="src/media/audios/darkVaderSound.mp3" class="audioGameOver" ></audio>
+			<audio src="src/media/audios/chewbaccaWookie.mp3" class="audioWin" ></audio>
+			<div class="game_over">
+				<h1>vous avez perdu.</h1>
+				<p class="txt_over1">le côté obscur de la force s'est emparé</br>
+				de toutes les musiques de la saga afin</br>
+				de les détruire définitivement.</p>
+				<p class="txt_over2">mais il n'est jamais trop tard !</p>
+				<div class="replay" onclick="resetGame()">retentez votre chance</div>
+				<div class="return" onclick="returnMenu(3);">revenir au menu</div>
+			</div>
+			<div class="pause">
+				<h1>Profite de ta pause, jeune padawan.</h1>
+				<div class="resume" onclick="resume()">Reprendre</div>
+				<div class="replay" onclick="resetGame()">Recommencer</div>
+				<div class="comeBack" onclick="returnMenu(3);">revenir au menu</div>
+				<div class="onOffSound returnSound" onclick="sound()">désactiver le son</div>
+			</div>
+			<div class="success">
+				<h1>Félicitations, tu as gagné.</h1>
+				<p class="txt_success">Tu as réussi à sauver la musique !</p>
+				<div class="replay" onclick="resetGame()">recommencer</div>
+				<div class="return" onclick="returnMenu(3); ">revenir au menu</div>
+			</div>
+		</div>
+	</div>
+	<script src="src/js/var_sound.js"></script>
+	<script src="src/js/player.js"></script>
+	<script src="src/js/background.js"></script>
+	<script src="src/js/bonus.js"></script>
+	<script src="src/js/load.js"></script>
+	<script src="src/js/laser.js"></script>
+	<script src="src/js/enemy.js"></script>
+	<script type="text/javascript" src="src/js/script.js"></script>
+	<script src="src/js/test.js"></script>
+	<script src="src/js/event.js"></script>
+	<script src="src/js/main.js"></script>
+	<script type="text/javascript" src="src/js/parallax.js"></script>
+</body>
+</html>

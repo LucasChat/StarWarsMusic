@@ -1,0 +1,761 @@
+/***** GLOBAL CSS *****/
+html{background: url('../img/bg_stars.jpg') top center no-repeat; background-size: cover; background-attachment: fixed;}
+body{font-family: 'Play', Arial, sans-serif;width: 100%;height: 100%; overflow: hidden;}
+.no_selection{
+    -webkit-user-select: none; 
+       -moz-user-select: none;
+}
+a{text-decoration: none; color: inherit;}
+select,button{cursor: pointer;}
+.content{width: auto; height: auto;}
+@font-face {
+    font-family: "starJedi";
+    src: url('../font/Starjedi.ttf');
+}
+
+/***** HEADER *****/
+
+.menu_main_wrap{
+	display: block;
+	color: #fff;
+}
+
+.menu_main{
+	font-size: 16px;
+	text-align: center;
+}
+
+.menu_item{
+	display: inline-block;
+	margin-left: 2%;
+	margin-right: 2%;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.menu_item:nth-child(n+2){
+	width: 160px;
+	height: 35px;
+	background-color: #17789b;
+	color: #fff;
+	font-weight: bold;
+	line-height: 34px;
+	border-radius: 7px;
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+}
+
+.menu_item:nth-child(n+2):hover{
+	background-color: #fff;
+	color: #000;
+}
+
+.menu_item:first-child{
+	margin-top:20px;
+}
+
+.menu_item:last-child{
+	background-color: #ffc70e;
+	color: #000;
+}
+
+.logo{
+	width: 380px;
+	height: 112px;
+}
+
+/************CONTENT HOME***************/
+/***** PARALLAX *****/
+
+.parallax_conteneur{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	right: 10%;
+	z-index: 1;
+}
+
+.xwing{
+	float: left;
+	margin-top: 50px;
+	width: 90px;
+	height: 90px;
+	background: url('../img/x_wing.png') no-repeat;
+	background-size: 100%;
+}
+
+.enemy{
+	right: 10%;
+	width: 70px;
+	height: 70px;
+	background: url('../img/GauntletFighter.png') no-repeat;
+	background-size: 100%;
+	float: right;
+}
+
+.laser{
+	position: relative;
+	z-index: 200;
+	width: 20px;
+	height: 10px;
+	background: url('../img/Laser_mechant.png') no-repeat;
+	background-size: 100%;
+	margin-top: 20px;
+}
+
+.star{
+	position: absolute;
+	top: 0;
+	z-index: 300;
+	width: 30px;
+	height: 30px;
+	background: url('../img/star.png') no-repeat;
+}
+
+.enemy_one{margin-top: 100px;}
+.enemy_two{margin-top: 200px;}
+
+.star_one{margin-left: 90%;background-size: 40%; margin-top: 10px;}
+.star_two{margin-left: 30%;background-size: 50%; margin-top: 50px;}
+.star_three{margin-left: 60%;background-size: 30%; margin-top: 70px;}
+.star_four{margin-left: 20%;background-size: 40%; margin-top: 50px;}
+.star_five{margin-left: 24%;background-size: 50%; margin-top: 80px;}
+.star_six{margin-left: 10%;background-size: 30%; margin-top: 140px;}
+.star_seven{margin-left: 1%;background-size: 20%; margin-top: 100px;}
+
+
+.laser_one{margin-left: 20%;}
+.laser_two{margin-left: 30%;}
+.laser_three{margin-left: 60%;}
+.laser_four{margin-left: 50%;}
+.laser_five{margin-left: 40%;}
+.laser_six{margin-left: 80%;}
+.laser_seven{margin-left: 70%;}
+.laser_eight{margin-left: 25%;}
+
+/***** WELCOME *****/
+
+.welcome_wrap{
+	position: relative;
+	z-index: 100;
+	display: block;
+	text-align: center;
+	margin-top: 200px;
+	z-index: 2;
+}
+
+.welcome{
+	font-size: 42px;
+	color:#fff;
+	font-family: 'Russo One', sans-serif;
+	line-height: 40px;
+}
+
+.ready{
+	margin-top: 20px;
+	color: #fff;
+	font-size: 18px;
+	line-height: 30px;
+}
+
+
+
+/************CONTENT RULES***************/
+
+.content_rules{
+	display: none;
+	width: 800px;
+	margin: auto;
+	margin-top: 80px;
+}
+
+.txt_rules{
+	color: #fff;
+}
+
+.sum{
+	color: #ffc70e;
+}
+
+/************CONTENT CREDIT***************/
+
+.content_credit{
+	display: none;
+	color: #ffc70e;
+	overflow: hidden;
+
+}
+
+#start
+{
+	position: relative;
+	width: 16em;
+	font-size: 200%;
+	font-weight: 400;
+	margin: 20% auto;
+	color: #4ee;
+	opacity: 0;
+	z-index: 1;
+	-webkit-animation: intro 2s ease-out;
+	-moz-animation: intro 2s ease-out;
+	-ms-animation: intro 2s ease-out;
+	-o-animation: intro 2s ease-out;
+	animation: intro 2s ease-out;
+}
+
+@-webkit-keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-moz-keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-ms-keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-o-keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@keyframes intro {
+	0% { opacity: 1; }
+	90% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+/* Animation du titre */ 
+#title
+{
+	position: absolute;
+	width: 2.6em;
+	left: 50%;
+	top: 25%;
+	font-size: 10em;
+	text-align: center;
+	margin-left: -1.3em;
+	line-height: 0.8em;
+	letter-spacing: -0.05em;
+	color: #000;
+	text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
+	opacity: 0;
+	z-index: 1;
+	-webkit-animation: logo 5s ease-out 2.5s;
+	-moz-animation: logo 5s ease-out 2.5s;
+	-ms-animation: logo 5s ease-out 2.5s;
+	-o-animation: logo 5s ease-out 2.5s;
+	animation: logo 5s ease-out 2.5s;
+}
+
+#title sub
+{
+	display: block;
+	font-size: 0.3em;
+	letter-spacing: 0;
+	line-height: 0.8em;
+}
+
+@-webkit-keyframes logo {
+	0% { -webkit-transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { -webkit-transform: scale(0.1); opacity: 0; }
+}
+
+@-moz-keyframes logo {
+	0% { -moz-transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { -moz-transform: scale(0.1); opacity: 0; }
+}
+
+@-ms-keyframes logo {
+	0% { -ms-transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { -ms-transform: scale(0.1); opacity: 0; }
+}
+
+@-o-keyframes logo {
+	0% { -o-transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { -o-transform: scale(0.1); opacity: 0; }
+}
+
+@keyframes logo {
+	0% { transform: scale(1); opacity: 1; }
+	50% { opacity: 1; }
+	100% { transform: scale(0.1); opacity: 0; }
+}
+
+/* on donne une perspective */
+#titles
+{
+	position: absolute;
+	width: 18em;
+	height: 50em;
+	bottom: 0;
+	left: 50%;
+	margin-left: -9em;
+	font-size: 350%;
+	text-align: justify;
+	overflow: hidden;
+	-webkit-transform-origin: 50% 100%;
+	-moz-transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	-o-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-transform: perspective(300px) rotateX(25deg);
+	-moz-transform: perspective(300px) rotateX(25deg);
+	-ms-transform: perspective(300px) rotateX(25deg);
+	-o-transform: perspective(300px) rotateX(25deg);
+	transform: perspective(300px) rotateX(25deg);
+}
+
+/* On suprime le text quand il arrive à la fin */ 
+#titles:after
+{
+	position: absolute;
+	content: ' ';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 60%;
+	pointer-events: none;
+}
+
+#titles p
+{
+	text-align: justify;
+	margin: 0.8em 0;
+}
+
+/* On annim le text pour qu'il défile */ 
+#titlecontent
+{
+	position: absolute;
+	top: 100%;
+	-webkit-animation: scroll 150s linear 2s infinite;
+	-moz-animation: scroll 150s linear 2s infinite;
+	-ms-animation: scroll 150s linear 2s infinite;
+	-o-animation: scroll 150s linear 2s infinite;
+	animation: scroll 150s linear 2s infinite;
+}
+
+/* animation */
+@-webkit-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+@-moz-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+@-ms-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+@-o-keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+@keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
+
+/************CONTENT GAME***************/
+.content_game{
+	display: block;
+}
+
+/*CHOOSE SPACESHIP*/
+.choose_spaceship{
+	position: relative;
+	margin: auto;
+	width: 960px;
+	height: 482px;
+	background: url('../img/bg_game.png') no-repeat;
+	margin-top: 60px;
+	display: none;
+}
+
+.txt_choose_spaceship{
+	position: absolute;
+	bottom: 10px;
+	left: 360px;
+	font-size: 18px;
+	font-family: 'Russo One', sans-serif;
+	color: #000;
+}
+
+.spaceship{
+	position: absolute;
+	top:80px;
+	left: 500px;
+	cursor: pointer;
+}
+
+.spaceship_xwing{
+	position: absolute;
+	top: 40px;
+	left: 75px;
+	width: 369px;
+	height: 186px;
+	background: url('../img/xwing_grey.png') no-repeat;
+}
+
+.spaceship_millenium{
+	position: absolute;
+	top: 40px;
+	left: 520px;
+	width: 369px;
+	height: 186px;
+	background: url('../img/millenium_grey.png') no-repeat;
+}
+
+.spaceship_naboo{
+	position: absolute;
+	top: 245px;
+	left: 520px;
+	width: 369px;
+	height: 186px;
+	background: url('../img/naboo_grey.png') no-repeat;
+}
+
+.spaceship_interceptor{
+	position: absolute;
+	top: 245px;
+	left: 75px;
+	width: 369px;
+	height: 186px;
+	background: url('../img/interceptor_grey.png') no-repeat;
+}
+
+.spaceship_xwing:hover{background: url('../img/xwing_selected.png') no-repeat;}
+.spaceship_millenium:hover{background: url('../img/millenium_selected.png') no-repeat;}
+.spaceship_interceptor:hover{background: url('../img/interceptor_selected.png') no-repeat;}
+.spaceship_naboo:hover{background: url('../img/naboo_selected.png') no-repeat;}
+
+.txt_interceptor, .txt_millenium, .txt_xwing, .txt_naboo{
+	font-family: 'Russo One', sans-serif;
+	font-size: 24px;
+}
+
+.txt_interceptor, .txt_millenium{
+	position: absolute;
+	top: 225px;
+	left: 409px;
+}
+
+.txt_xwing, .txt_naboo{
+	position: absolute;
+	top: 225px;
+	left: 435px;
+}
+
+.txt_xwing{display: none;}
+.spaceship_xwing:hover ~ .txt_xwing{display: block;}
+
+.txt_interceptor{display: none;}
+.spaceship_interceptor:hover ~ .txt_interceptor{display: block;}
+
+.txt_naboo{display: none;}
+.spaceship_naboo:hover ~ .txt_naboo{display: block;}
+
+.txt_millenium{display: none;}
+.spaceship_millenium:hover ~ .txt_millenium{display: block;}
+
+
+/*CHOOSE MUSIC*/
+
+.choose_music{
+	display: none;
+	position: relative;
+	margin: auto;
+	width: 971px;
+	height: 484px;
+	background: url('../img/bg_game_music.png') no-repeat;
+	margin-top: 60px;
+	cursor: pointer;
+}
+
+.choose_music_title{
+	width: 270px;
+	height: 35px;
+	background-color: #17789b;
+	font-size: 22px;
+	font-family: 'Play', sans-serif;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	padding-top: 5px;
+	position: absolute;
+	top: 20px;
+	left: 35px;
+}
+
+.previous{
+	background-color: #e6b30c;
+	font-family: 'Play', sans-serif;
+	color: #000;
+	width: 235px;
+	height: 16px;
+	border: none;
+	position: absolute;
+	top: 70px;
+	left: 52px;
+}
+
+.previous:hover{
+	background-color: #d0a30c;
+}
+
+.form{
+	position: absolute;
+	top:115px;
+	left: 25px;
+}
+
+.custom_dropdown select{
+    font-size: inherit;
+    font-family: 'Play';
+    padding: .5em;
+    margin: 0; 
+}
+
+.custom_dropdown_select_white {
+    background-color: #1b1b1b;
+    color: #fff;    
+}
+
+.star_wars_un, .star_wars_deux, .star_wars_trois, .star_wars_cinq, .star_wars_six{
+	display: none;
+	position: absolute;
+	top: 180px;
+	left: 75px;
+}
+
+.star_wars_quatre{
+	display: block;
+	position: absolute;
+	top: 180px;
+	left: 75px;
+}
+
+.btn_level{
+	border: none;
+	height: 36px;
+	width: 200px;
+	background-color: #1b1b1b;
+	font-size: inherit;
+    font-family: 'Play';
+    margin-top: 25px;
+    color: #fff;
+}
+
+.btn_level:focus{
+	border: solid 2px #ffc70e;
+	color: #ffc70e;
+}
+
+.selected_music{
+	width: 580px;
+	position: absolute;
+	top: 52px;
+	right: 22px;
+}
+
+.img_music{
+	float: left;
+}
+
+.selected_music_title{
+	text-align: center;
+	padding-top: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.selected_music_description{
+	padding-top: 20px;
+	padding-left: 305px;
+	padding-right: 10px;
+	font-size: 16px;
+	line-height: 20px
+}
+
+.lets_go{
+	border: none;
+	border-radius: 7px;
+	background-color: #ffc70e;
+	color: #000;
+	font-family: 'Play', sans-serif;
+	font-weight: bold;
+	font-size: 22px;
+	padding: 10px;
+	position: absolute;
+	bottom: 50px;
+	right: 87px;
+}
+
+.lets_go:hover{
+	background-color: #d0a30c;
+}
+
+.selected_1,.selected_2,.selected_3,.selected_4,.selected_5, .selected_6, .selected_7, .selected_8, .selected_9, .selected_10, .selected_11, .selected_12, .selected_13, .selected_14, .selected_15, .selected_16, .selected_17, .selected_sw1, .selected_sw2, .selected_sw3, .selected_sw5, .selected_sw6{display: none;}
+.selected_sw4{display: block;}
+
+
+/************GAME PAGES***************/
+
+.replay, .return, .comeBack, .resume, .onOffSound{
+	cursor:pointer;
+}
+
+
+/*GAME OVER*/
+.game_over{
+	width: 960px;
+	height: 600px;
+	background-image :url("../img/bg_GameOver.png");
+	font-family: "starJedi";
+	text-align: center;
+	display:none;
+	margin:auto;
+	position:relative;
+	top: -600px;
+}
+
+
+.game_over>h1{
+	font-size: 36px;
+	display: block;
+	transform:translateY(30px);
+}
+
+.txt_over1{
+	display: block;
+	transform:translateY(270px);
+}
+
+.txt_over2{
+	display: block;
+	transform:translateY(300px);
+}
+
+.game_over>p{
+	font-size: 24px;
+}
+.replay, .return{
+	font-size: 36px;
+}
+
+.game_over>.replay{
+	transform:translateY(360px);
+}
+
+.game_over>.return{
+	transform:translateY(365px);
+}
+
+
+/*PAUSE*/
+.pause{
+	width: 960px;
+	height: 600px;
+	background-image :url("../img/BGPause.png");
+	font-family: "starJedi";
+	text-align: center;
+	margin:auto;
+	position:relative;
+	top: -600px;
+	display:none;
+}
+
+
+
+.pause>h1{
+	font-size: 36px;
+	display: block;
+	transform:translateY(30px);
+}
+
+.replay, .comeBack, .resume{
+	font-size: 36px;
+}
+
+.resume{
+	transform:translateY(330px);
+}
+.pause>.replay{
+	transform:translateY(340px);
+}
+.pause>.comeBack{
+	transform:translateY(350px);
+}
+.onOffSound{
+	transform:translateY(390px);
+}
+
+
+/*SUCCES*/
+.success{
+	width: 960px;
+	height: 600px;
+	background-image :url("../img/BGWin.png");
+	font-family: "starJedi";
+	text-align: center;
+	margin:auto;
+	position:relative;
+	top: -600px;
+	display:none;
+}
+
+.success>h1{
+	font-size: 36px;
+	display: block;
+	transform:translateY(20px);
+}
+
+.txt_success{
+	font-size: 24px;
+	display: block;
+	transform:translateY(340px);
+}
+
+.replay, .return{
+	font-size: 36px;
+}
+
+.success>.replay{
+	transform:translateY(400px);
+}
+
+.success>.return{
+	transform:translateY(410px);
+}
+
+
+
+/************CANVAS***************/
+#canvas{
+	display:none;
+	margin:auto;
+	cursor:none;
+	position:relative;
+	margin-top:25px;
+}
